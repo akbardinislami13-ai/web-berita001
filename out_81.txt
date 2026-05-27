@@ -1,0 +1,10 @@
+
+Warning: require(E:\web-berita001\vendor\composer/../laravel/framework/src/Illuminate/Collections/functions.php): Failed to open stream: No such file or directory in E:\web-berita001\vendor\composer\autoload_real.php on line 41
+
+Fatal error: Uncaught Error: Failed opening required 'E:\web-berita001\vendor\composer/../laravel/framework/src/Illuminate/Collections/functions.php' (include_path='.;E:/laragon/etc/php/pear') in E:\web-berita001\vendor\composer\autoload_real.php:41
+Stack trace:
+#0 E:\web-berita001\vendor\composer\autoload_real.php(45): {closure}('476ca15b8d69b04...', 'E:\\web-berita00...')
+#1 E:\web-berita001\vendor\autoload.php(22): ComposerAutoloaderInitb57c184760e0f25ed7eed61da916ac25::getLoader()
+#2 E:\web-berita001\artisan(10): require('E:\\web-berita00...')
+#3 {main}
+  thrown in E:\web-berita001\vendor\composer\autoload_real.php on line 41

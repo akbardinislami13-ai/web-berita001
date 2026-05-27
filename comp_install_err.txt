@@ -1,0 +1,10 @@
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Package operations: 0 installs, 1 update, 0 removals
+Cannot create cache directory C:/Users/ADVAN/AppData/Local/Composer/files/, or directory is not writable. Proceeding without cache. See also cache-read-only config if your filesystem is read-only.
+  - Downloading laravel/framework (v13.12.0)
+  - Upgrading laravel/framework (v13.9.0 => v13.12.0): Extracting archive
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+Script @php artisan package:discover --ansi handling the post-autoload-dump event returned with error code 1

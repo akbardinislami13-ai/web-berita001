@@ -81,6 +81,22 @@
                 </a>
             </li>
 
+            <!-- Nav Item: Produk -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.products.index') }}">
+                    <i class="fas fa-fw fa-box"></i>
+                    <span>Produk</span>
+                </a>
+            </li>
+
+            <!-- Nav Item: Pesanan -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-shopping-cart"></i>
+                    <span>Pesanan</span>
+                </a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

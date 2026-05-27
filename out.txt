@@ -1,0 +1,2 @@
+
+Parse error: syntax error, unexpected token "readonly", expecting "abstract" or "final" or "class" in E:\web-berita001\vendor\sebastian\version\src\Version.php on line 26

@@ -1,0 +1,121 @@
+Loading composer repositories with package information
+Cannot create cache directory C:/Users/ADVAN/AppData/Local/Composer/repo/https---repo.packagist.org/, or directory is not writable. Proceeding without cache. See also cache-read-only config if your filesystem is read-only.
+Updating dependencies
+Lock file operations: 0 installs, 26 updates, 0 removals
+  - Upgrading guzzlehttp/guzzle (7.10.0 => 7.10.4)
+  - Upgrading guzzlehttp/promises (2.3.0 => 2.4.1)
+  - Upgrading guzzlehttp/psr7 (2.9.0 => 2.10.2)
+  - Upgrading guzzlehttp/uri-template (v1.0.5 => v1.0.6)
+  - Upgrading laravel/framework (v13.9.0 => v13.12.0)
+  - Upgrading laravel/pail (v1.2.6 => v1.2.7)
+  - Upgrading laravel/prompts (v0.3.17 => v0.3.18)
+  - Upgrading phpunit/phpunit (12.5.25 => 12.5.27)
+  - Upgrading psy/psysh (v0.12.22 => v0.12.23)
+  - Upgrading sebastian/cli-parser (4.2.0 => 4.2.1)
+  - Upgrading sebastian/comparator (7.1.6 => 7.1.8)
+  - Upgrading sebastian/environment (8.1.0 => 8.1.2)
+  - Upgrading sebastian/exporter (7.0.2 => 7.0.3)
+  - Upgrading sebastian/lines-of-code (4.0.0 => 4.0.1)
+  - Upgrading sebastian/type (6.0.3 => 6.0.4)
+  - Upgrading symfony/http-kernel (v8.0.11 => v8.0.12)
+  - Upgrading symfony/mailer (v8.0.8 => v8.0.12)
+  - Upgrading symfony/mime (v8.0.9 => v8.0.12)
+  - Upgrading symfony/polyfill-intl-grapheme (v1.37.0 => v1.38.1)
+  - Upgrading symfony/polyfill-intl-idn (v1.37.0 => v1.38.1)
+  - Upgrading symfony/polyfill-intl-normalizer (v1.37.0 => v1.38.0)
+  - Upgrading symfony/polyfill-mbstring (v1.37.0 => v1.38.1)
+  - Upgrading symfony/polyfill-php84 (v1.37.0 => v1.38.1)
+  - Upgrading symfony/polyfill-php85 (v1.37.0 => v1.38.1)
+  - Upgrading symfony/polyfill-php86 (v1.37.0 => v1.38.0)
+  - Upgrading symfony/routing (v8.0.9 => v8.0.12)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 0 installs, 26 updates, 0 removals
+Cannot create cache directory C:/Users/ADVAN/AppData/Local/Composer/files/, or directory is not writable. Proceeding without cache. See also cache-read-only config if your filesystem is read-only.
+  - Downloading symfony/polyfill-mbstring (v1.38.1)
+  - Downloading guzzlehttp/psr7 (2.10.2)
+  - Downloading guzzlehttp/promises (2.4.1)
+  - Downloading guzzlehttp/guzzle (7.10.4)
+  - Downloading guzzlehttp/uri-template (v1.0.6)
+  - Downloading symfony/polyfill-intl-normalizer (v1.38.0)
+  - Downloading symfony/polyfill-intl-grapheme (v1.38.1)
+  - Downloading symfony/routing (v8.0.12)
+  - Downloading symfony/polyfill-php86 (v1.38.0)
+  - Downloading symfony/polyfill-php85 (v1.38.1)
+  - Downloading symfony/polyfill-php84 (v1.38.1)
+  - Downloading symfony/polyfill-intl-idn (v1.38.1)
+  - Downloading symfony/mime (v8.0.12)
+  - Downloading symfony/mailer (v8.0.12)
+  - Downloading symfony/http-kernel (v8.0.12)
+  - Downloading laravel/prompts (v0.3.18)
+  - Downloading laravel/framework (v13.12.0)
+  - Downloading laravel/pail (v1.2.7)
+  - Downloading psy/psysh (v0.12.23)
+  - Downloading sebastian/type (6.0.4)
+  - Downloading sebastian/exporter (7.0.3)
+  - Downloading sebastian/environment (8.1.2)
+  - Downloading sebastian/comparator (7.1.8)
+  - Downloading sebastian/cli-parser (4.2.1)
+  - Downloading sebastian/lines-of-code (4.0.1)
+  - Downloading phpunit/phpunit (12.5.27)
+  0/26 [>---------------------------]   0%
+  4/26 [====>-----------------------]  15%
+  7/26 [=======>--------------------]  26%
+  9/26 [=========>------------------]  34%
+ 11/26 [===========>----------------]  42%
+ 13/26 [==============>-------------]  50%
+ 18/26 [===================>--------]  69%
+ 20/26 [=====================>------]  76%
+ 21/26 [======================>-----]  80%
+ 24/26 [=========================>--]  92%
+ 26/26 [============================] 100%
+  - Upgrading symfony/polyfill-mbstring (v1.37.0 => v1.38.1): Extracting archive
+  - Upgrading guzzlehttp/psr7 (2.9.0 => 2.10.2): Extracting archive
+  - Upgrading guzzlehttp/promises (2.3.0 => 2.4.1): Extracting archive
+  - Upgrading guzzlehttp/guzzle (7.10.0 => 7.10.4): Extracting archive
+  - Upgrading guzzlehttp/uri-template (v1.0.5 => v1.0.6): Extracting archive
+  - Upgrading symfony/polyfill-intl-normalizer (v1.37.0 => v1.38.0): Extracting archive
+  - Upgrading symfony/polyfill-intl-grapheme (v1.37.0 => v1.38.1): Extracting archive
+  - Upgrading symfony/routing (v8.0.9 => v8.0.12): Extracting archive
+  - Upgrading symfony/polyfill-php86 (v1.37.0 => v1.38.0): Extracting archive
+  - Upgrading symfony/polyfill-php85 (v1.37.0 => v1.38.1): Extracting archive
+  - Upgrading symfony/polyfill-php84 (v1.37.0 => v1.38.1): Extracting archive
+  - Upgrading symfony/polyfill-intl-idn (v1.37.0 => v1.38.1): Extracting archive
+  - Upgrading symfony/mime (v8.0.9 => v8.0.12): Extracting archive
+  - Upgrading symfony/mailer (v8.0.8 => v8.0.12): Extracting archive
+  - Upgrading symfony/http-kernel (v8.0.11 => v8.0.12): Extracting archive
+  - Upgrading laravel/prompts (v0.3.17 => v0.3.18): Extracting archive
+  - Upgrading laravel/framework (v13.9.0 => v13.12.0): Extracting archive
+  - Upgrading laravel/pail (v1.2.6 => v1.2.7): Extracting archive
+  - Upgrading psy/psysh (v0.12.22 => v0.12.23): Extracting archive
+  - Upgrading sebastian/type (6.0.3 => 6.0.4): Extracting archive
+  - Upgrading sebastian/exporter (7.0.2 => 7.0.3): Extracting archive
+  - Upgrading sebastian/environment (8.1.0 => 8.1.2): Extracting archive
+  - Upgrading sebastian/comparator (7.1.6 => 7.1.8): Extracting archive
+  - Upgrading sebastian/cli-parser (4.2.0 => 4.2.1): Extracting archive
+  - Upgrading sebastian/lines-of-code (4.0.0 => 4.0.1): Extracting archive
+  - Upgrading phpunit/phpunit (12.5.25 => 12.5.27): Extracting archive
+  0/26 [>---------------------------]   0%
+  6/26 [======>---------------------]  23%
+  9/26 [=========>------------------]  34%
+ 10/26 [==========>-----------------]  38%
+ 13/26 [==============>-------------]  50%
+ 15/26 [================>-----------]  57%
+ 19/26 [====================>-------]  73%
+ 20/26 [=====================>------]  76%
+ 21/26 [======================>-----]  80%
+ 22/26 [=======================>----]  84%
+ 23/26 [========================>---]  88%
+ 24/26 [=========================>--]  92%
+ 25/26 [==========================>-]  96%    Update of laravel/framework failed
+The following exception is caused by a process timeout
+Check https://getcomposer.org/doc/06-config.md#process-timeout for details
+
+In Process.php line 1204:
+                                                                               
+  The process "rmdir /S /Q E:\web-berita001\vendor\laravel\framework" exceede  
+  d the timeout of 300 seconds.                                                
+                                                                               
+
+update [--with WITH] [--prefer-source] [--prefer-dist] [--prefer-install PREFER-INSTALL] [--dry-run] [--dev] [--no-dev] [--lock] [--no-install] [--no-audit] [--audit-format AUDIT-FORMAT] [--no-autoloader] [--no-suggest] [--no-progress] [-w|--with-dependencies] [-W|--with-all-dependencies] [-v|vv|vvv|--verbose] [-o|--optimize-autoloader] [-a|--classmap-authoritative] [--apcu-autoloader] [--apcu-autoloader-prefix APCU-AUTOLOADER-PREFIX] [--ignore-platform-req IGNORE-PLATFORM-REQ] [--ignore-platform-reqs] [--prefer-stable] [--prefer-lowest] [-i|--interactive] [--root-reqs] [--] [<packages>...]
+

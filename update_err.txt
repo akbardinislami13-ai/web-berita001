@@ -1,0 +1,11 @@
+Loading composer repositories with package information
+Cannot create cache directory C:/Users/ADVAN/AppData/Local/Composer/repo/https---repo.packagist.org/, or directory is not writable. Proceeding without cache. See also cache-read-only config if your filesystem is read-only.
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - laravel/pao v1.0.6 conflicts with laravel/framework <12.0.0.
+    - Root composer.json requires laravel/pao ^1.0.6 -> satisfiable by laravel/pao[v1.0.6].
+    - Root composer.json requires laravel/framework ^10.0 -> satisfiable by laravel/framework[v10.0.0, ..., 10.50.2].
+
+Use the option --with-all-dependencies (-W) to allow upgrades, downgrades and removals for packages currently locked to specific versions.
