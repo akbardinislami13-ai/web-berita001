@@ -3,9 +3,9 @@
 @section('content')
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Manajemen Produk</h1>
-        <a href="#" class="btn btn-primary btn-sm shadow-sm">
-            <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Produk (Coming Soon)
+        <h1 class="h3 mb-0 text-gray-800">Manajemen Kategori</h1>
+        <a href="{{ route('categories.create') }}" class="btn btn-primary btn-sm shadow-sm">
+            <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Kategori
         </a>
     </div>
 
@@ -19,8 +19,12 @@
     @endif
 
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Daftar Produk</h6>
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Daftar Kategori Berita</h6>
+            <form action="{{ route('categories.index') }}" method="GET" class="form-inline">
+                <input type="text" name="search" class="form-control form-control-sm mr-sm-2" placeholder="Cari kategori..." value="{{ request('search') }}">
+                <button type="submit" class="btn btn-primary btn-sm">Cari</button>
+            </form>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -28,44 +32,40 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Produk</th>
-                            <th>Kategori</th>
-                            <th>Harga</th>
-                            <th>Stok</th>
+                            <th>Nama Kategori</th>
+                            <th>Slug</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($products as $product)
+                        @forelse($categories as $category)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $product->name }}</td>
-                            <td>{{ $product->category->name }}</td>
-                            <td>Rp {{ number_format($product->price, 0, ',', '.') }}</td>
-                            <td>{{ $product->stock }}</td>
+                            <td>{{ ($categories->currentPage() - 1) * $categories->perPage() + $loop->iteration }}</td>
+                            <td>{{ $category->name }}</td>
+                            <td>{{ $category->slug }}</td>
                             <td>
-                                <a href="#" class="btn btn-warning btn-sm">
-                                    <i class="fas fa-edit"></i>
+                                <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i> Edit
                                 </a>
-                                <form action="#" method="POST" class="d-inline">
+                                <form action="{{ route('categories.destroy', $category->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">
-                                        <i class="fas fa-trash"></i>
+                                        <i class="fas fa-trash"></i> Hapus
                                     </button>
                                 </form>
                             </td>
                         </tr>
                         @empty
                         <tr>
-                            <td colspan="6" class="text-center">Data produk belum tersedia.</td>
+                            <td colspan="4" class="text-center">Data tidak ditemukan.</td>
                         </tr>
                         @endforelse
                     </tbody>
                 </table>
             </div>
             <div class="mt-3">
-                {{ $products->links() }}
+                {{ $categories->appends(['search' => request('search')])->links() }}
             </div>
         </div>
     </div>

@@ -38,4 +38,16 @@ class User extends Authenticatable
     {
         return $this->hasMany(Order::class);
     }
+
+    // Relasi One-to-One ke model Profile
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+
+    // Relasi One-to-Many ke model Article
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }

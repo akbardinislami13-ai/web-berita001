@@ -16,7 +16,7 @@ class CategorySeeder extends Seeder
     foreach ($categories as $cat) {
         \App\Models\Category::create([
             'name' => $cat,
-            'description' => 'Kategori untuk produk ' . $cat
+            'slug' => \Illuminate\Support\Str::slug($cat)
         ]);
     }
 }

@@ -30,7 +30,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/admin/dashboard') }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-newspaper"></i>
                 </div>
@@ -40,11 +40,19 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item: Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ url('/admin/dashboard') }}">
+            <!-- Nav Item: News Dashboard -->
+            <li class="nav-item {{ request()->is('admin/news') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.news.index') }}">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>News Home</span>
+                </a>
+            </li>
+
+            <!-- Nav Item: Dashboard Stats -->
+            <li class="nav-item {{ request()->is('admin/dashboard') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
+                    <span>Statistik</span>
                 </a>
             </li>
 
@@ -57,27 +65,35 @@
             </div>
 
             <!-- Nav Item: Berita -->
-            <li class="nav-item">
+            <li class="nav-item {{ request()->is('admin/articles*') ? 'active' : '' }}">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBerita"
                     aria-expanded="true" aria-controls="collapseBerita">
                     <i class="fas fa-fw fa-newspaper"></i>
                     <span>Berita</span>
                 </a>
-                <div id="collapseBerita" class="collapse" aria-labelledby="headingBerita"
+                <div id="collapseBerita" class="collapse {{ request()->is('admin/articles*') ? 'show' : '' }}" aria-labelledby="headingBerita"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu Berita:</h6>
-                        <a class="collapse-item" href="#">Semua Berita</a>
-                        <a class="collapse-item" href="#">Tambah Berita</a>
+                        <a class="collapse-item" href="{{ route('articles.index') }}">Semua Berita</a>
+                        <a class="collapse-item" href="{{ route('articles.create') }}">Tambah Berita</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item: Kategori -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
+            <li class="nav-item {{ request()->is('admin/categories*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('categories.index') }}">
                     <i class="fas fa-fw fa-tags"></i>
                     <span>Kategori</span>
+                </a>
+            </li>
+
+            <!-- Nav Item: Pengguna -->
+            <li class="nav-item {{ request()->is('admin/users*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('users.index') }}">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Pengguna</span>
                 </a>
             </li>
 

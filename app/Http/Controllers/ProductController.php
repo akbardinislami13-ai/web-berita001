@@ -27,7 +27,7 @@ class ProductController extends Controller
         // Data statistik tambahan untuk dashboard
         $total_stock = Product::sum('stock');
         $avg_price = Product::avg('price');
-        $all_products = Product::with(['category', 'tags'])->paginate(10);
+        $products = Product::with(['category', 'tags'])->paginate(10);
 
         return view('admin.products.index', compact(
             'top_products', 
@@ -35,7 +35,7 @@ class ProductController extends Controller
             'promo_products', 
             'total_stock', 
             'avg_price',
-            'all_products'
+            'products'
         ));
     }
 }

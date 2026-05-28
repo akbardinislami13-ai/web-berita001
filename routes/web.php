@@ -1,7 +1,17 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomeController;
+use App\Models\Article;
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('dashboard');
@@ -18,8 +28,13 @@ Route::middleware('auth')->group(function () {
 
     // Admin News Routes
     Route::prefix('admin')->group(function () {
-        Route::get('/news', [\App\Http\Controllers\NewsController::class, 'index'])->name('admin.news.index');
-        Route::get('/products', [\App\Http\Controllers\ProductController::class, 'index'])->name('admin.products.index');
+        Route::get('/news', [NewsController::class, 'index'])->name('admin.news.index');
+        Route::get('/products', [ProductController::class, 'index'])->name('admin.products.index');
+        
+        // CRUD Routes Pertemuan 14
+        Route::resource('users', UserController::class);
+        Route::resource('categories', CategoryController::class);
+        Route::resource('articles', ArticleController::class);
     });
 });
 
@@ -29,18 +44,16 @@ require __DIR__.'/auth.php';
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/admin/dashboard', function () {
-        $total_berita = \App\Models\News::count();
-        $total_kategori = \App\Models\Category::count();
-        $total_user = \App\Models\User::count();
+        $total_berita = Article::count();
+        $total_kategori = Category::count();
+        $total_user = User::count();
         
-        return view('admin.news.dashboard', compact('total_berita', 'total_kategori', 'total_user'));
-    });
+        return view('admin.dashboard', compact('total_berita', 'total_kategori', 'total_user'));
+    })->name('admin.dashboard');
 
 });
-Auth::routes();
+// Auth::routes(); // Komentar: Redundan karena sudah ada require auth.php di atas
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
